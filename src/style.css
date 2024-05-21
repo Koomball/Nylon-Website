@@ -212,6 +212,7 @@ li a:hover {
   background-color: white;
   position: relative;
   border-radius: 6px;
+  color: black;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
