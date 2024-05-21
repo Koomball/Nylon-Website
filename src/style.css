@@ -252,3 +252,14 @@ li a:hover {
     left: 0%;
   }
 }
+
+#wrapper {
+    white-space: nowrap;
+    /* Optional overflow-x:hidden */
+}
+#wrapper div {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background: #BFFF00;
+}
