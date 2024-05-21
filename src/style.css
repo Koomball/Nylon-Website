@@ -268,5 +268,5 @@ li a:hover {
 
 corner {
   position: bottom;
-  outline: red;
+  display: block;
 }
