@@ -261,5 +261,7 @@ li a:hover {
     display: inline-block;
     height: 200px;
     width: 350px;
-    background: #BFFF00;
+    background: white;
+    font-size: 18px;
+    color: black;
 }
