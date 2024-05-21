@@ -266,3 +266,8 @@ li a:hover {
     color: black;
     text-align: bottom;
 }
+
+corner {
+  position: right;
+  border-block: red;
+}
