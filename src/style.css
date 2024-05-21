@@ -131,7 +131,7 @@ li a:hover {
 
 /* The actual timeline (the vertical ruler) */
 .timeline2 {
-  position: left;
+  position: right;
   max-width: 1200px;
   margin: 0 auto;
 }
