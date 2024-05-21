@@ -267,7 +267,7 @@ li a:hover {
 }
 
 #wrapper corner {
-  position: bottom;
+  margin: bottom;
   display: block;
   border: medium solid red;
 }
