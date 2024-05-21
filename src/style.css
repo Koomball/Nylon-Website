@@ -269,5 +269,5 @@ li a:hover {
 
 corner {
   position: bottom;
-  border-block: red;
+  border: red;
 }
