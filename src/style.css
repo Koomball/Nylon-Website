@@ -255,12 +255,13 @@ li a:hover {
 
 #wrapper {
     white-space: nowrap;
-    /* Optional overflow-x:hidden */
+    overflow-y:hidden
 }
 #wrapper div {
     display: inline-block;
     height: 225px;
     width: 400px;
+    border-radius: 15px;
     background: white;
     font-size: 28px;
     color: black;
@@ -269,22 +270,35 @@ li a:hover {
 #wrapper corner {
   margin: bottom;
   display: block;
-  border: medium solid red;
 }
 
 #wrapper .containerBox {
   position: relative;
+  border: medium solid lightblue;
 }
 
 #wrapper .bottomright {
   position: absolute;
-  bottom: 8px;
-  right: 16px;
+  bottom: 0px;
+  right: 0px;
+  font-size: 18px;
+  border: medium solid lightblue;
+}
+
+#wrapper .topleft {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   font-size: 18px;
 }
+
 
 #wrapper img { 
   width: 100%;
   height: auto;
   opacity: 0.3;
+}
+
+activeBox {
+  border: medium solid red;
 }
