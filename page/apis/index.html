@@ -26,9 +26,9 @@
   <h1>Nylon API's</h1>
   <div style="width: 1028px; height: 250px; overflow-y:auto;">
   <section id="wrapper">
-  <div class="containerBox" style="width: 400px; height: 250px;">FlixSearch API <a class="bottomright">Free To Download</a></div>
-  <div class="containerBox" style="width: 400px; height: 250px;">Nylon Docs API <a class="bottomright">Free To Download</a></div>
-  <div class="containerBox" style="width: 400px; height: 250px;">ImageSplit API <a class="bottomright">Paid Usage + Hosting</a></div>
+  <a onclick="tabOpen(1)"><div class="containerBox" style="width: 400px; height: 250px;">FlixSearch API <a class="bottomright">Free To Download</a></div></a>
+  <div onclick="tabOpen(2)" class="containerBox" style="width: 400px; height: 250px;">Nylon Docs API <a class="bottomright">Free To Download</a></div>
+  <div onclick="tabOpen(3)" class="containerBox" style="width: 400px; height: 225px;">ImageSplit API <a class="bottomright">Paid Usage + Hosting</a></div>
     <div>Lorem Ipsum</div>
     <div>Lorem Ipsum</div>
     <div>Lorem Ipsum</div>
@@ -40,20 +40,8 @@
     <section>
     <p>Nylon offers various API's you can use there will be a free plan but API usage will be a paid system. Nylon will host API's and offer dashboards to easily use them and understand them</p>
       </section>
-    <h1>imageSplit API</h1>
-    <section>
-    <p>text here.</p>
-    </section>
-    <h1>FlixSearch API (Free To Download)</h1>
-    <section>
-    <p>Search if movies/series on netflix aits in your country, view reviews and search the netflix catalogue.<br>
-      This free to download API can be
-      intergrated with your project to expand its feature list. <br> <a href="#">Fork FlixSearch from this github repo.</a></p>
-    </section>
-    <section>
-    <h1>NylDocs API (Free To Download)</h1>
-    <p>Search through the Nylon Documentation from afar wether within your own project or your own Nylon related docs. <br> <a href="#">Fork NylDocs from this github repo.</a> </p>
-    </section>
+    <h1 id="docTitle">f</h1>
+    <div id="docDesc">f</div>
     
       </main>
       <footer>
@@ -61,3 +49,20 @@
       </footer>
     </body>
 </html>
+
+<script>
+function tabOpen(num) {
+ var a = document.getElementById("docTitle");
+ var b = document.getElementById("docDesc");
+  if (num == 1) {
+  a.innerHTML = "FlixSearch API (Free To Download)";
+  b.innerHTML = "Search if movies/series on netflix aits in your country, view reviews and search the netflix catalogue.<br> This free to download API can be intergrated with your project to expand its feature list. <br> <a>Fork FlixSearch from this github repo.</a>";
+  } else if (num == 2) {
+  a.innerHTML = "NylDocs API (Free To Download)";
+  b.innerHTML = "Search through the Nylon Documentation from afar wether within your own project or your own Nylon related docs. <br> <a>Fork NylDocs from this github repo.";
+  } else if (num == 3) {
+  a.innerHTML = "ImageSplit API";
+  b.innerHTML = "Soon"; 
+  }
+}
+</script>
