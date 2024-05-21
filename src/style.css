@@ -269,4 +269,5 @@ li a:hover {
 corner {
   position: bottom;
   display: block;
+  border: medium solid red;
 }
