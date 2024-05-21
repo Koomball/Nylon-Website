@@ -264,10 +264,9 @@ li a:hover {
     background: white;
     font-size: 28px;
     color: black;
-    text-align: bottom;
 }
 
 corner {
   position: bottom;
-  border: red;
+  outline: red;
 }
