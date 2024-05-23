@@ -310,9 +310,12 @@ activeBox {
 #hostWrapper div {
     display: inline-block;
     height: 1480px;
-    width: 480px;
+    width: 540px;
     border-radius: 15px;
     background: white;
     font-size: 28px;
     color: black;
+    vertical-align: top;
+    text-wrap: wrap;
+    
 }
