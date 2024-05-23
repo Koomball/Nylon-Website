@@ -307,7 +307,7 @@ activeBox {
     white-space: nowrap;
     overflow-y:hidden
 }
-#hostWrappee div {
+#hostWrapper div {
     display: inline-block;
     height: 1480px;
     width: 480px;
