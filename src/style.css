@@ -262,7 +262,7 @@ li a:hover {
     height: 225px;
     width: 400px;
     border-radius: 15px;
-    background: white;
+    background: #bbb;
     font-size: 28px;
     color: black;
 }
@@ -312,7 +312,7 @@ activeBox {
     height: 1480px;
     width: 620px;
     border-radius: 15px;
-    background: white;
+    background: #bbb;
     font-size: 28px;
     color: black;
     vertical-align: top;
