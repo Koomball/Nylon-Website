@@ -302,3 +302,17 @@ li a:hover {
 activeBox {
   border: medium solid red;
 }
+
+#hostWrapper {
+    white-space: nowrap;
+    overflow-y:hidden
+}
+#hostWrappee div {
+    display: inline-block;
+    height: 1480px;
+    width: 480px;
+    border-radius: 15px;
+    background: white;
+    font-size: 28px;
+    color: black;
+}
