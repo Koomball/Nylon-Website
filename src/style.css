@@ -1,321 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+
+
 body {
-  background-color: black;
-  color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-header {
-   text-align: center; 
-   padding: 20px;
-   background-color: #bbb35;
-   color: white;
-}
-
-.moveleft {
-  text-align: left;
-}
-
-nav {
-   text-align: center;
-   word-spacing: 1px;
-   Padding: 10px;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-footer {
-  background-color: gray;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: center;
-border-left: 1px solid #bbb;
-border-right: 1px solid #bbb;
-border-block: 1px solid #bbb;
-font-size: 16px;
-}
-
-li:last-child {
-  border-left: 1px solid #bbb;
-  border-right: 1px solid #bbb;
-  border-block: 1px solid #bbb;
-} 
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-
-.active {
-  background-color: #04AA6D;
-  border-left: 3px solid #333;
-}
-.extra {
-  
-}
-
-.dropbtn {
-  float: center;
-  border-left: 2px solid #333;
-  border-right: 2px solid #333;
-  background-color: #333;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #bbb;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: white; color: black}
-
-* {
-  box-sizing: border-box;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timelineblock {
-  display: inline;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
 .content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-  color: black;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
+    height: 100vh;
+    background-color: #1e2023;
+    margin-left: auto;
+    position: relative;
 }
 
-#wrapper {
-    white-space: nowrap;
-    overflow-y:hidden
+/*SideNav*/
+
+.sidenav {
+    width: 60%;
+    left: 0;
+    position: absolute;
+    background-color: #26292c;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#wrapper div {
-    display: inline-block;
-    height: 225px;
-    width: 400px;
+
+.sidenav .home {
+    width: 100%;
+    height: 25dvh;
+    position: absolute;
+    top: 70%;
+}
+
+.sidenav .home ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.sidenav .home ul li {
+    display: flex;
+    word-wrap: break-word;
+    border-bottom: 1px solid gray;
+    margin: 5px;
+    border-radius: 2px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.sidenav .home ul li a {
+    text-decoration: none;
+    color: #cdcdcd;
+}
+
+.sidenav .home ul li a:hover {
+    text-decoration: underline;
+}
+
+/*SideNav Documentation*/
+
+.sidenav .documentation {
+    width: 90%;
+    height: 390px;
+    background-color: #363636;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.sidenav .documentation .searchinp {
+    width: 100%;
+    top: 15px;
+    position: absolute;
+    text-align: center;
+}
+
+.sidenav .documentation .searchinp input {
+    outline: none;
+    text-align: center;
+    height: 25px;
+    width: 220px;
+    background-color: #26292c;
+    border: none;
+    color: white;
+}
+
+.sidenav .documentation .funcbox {
+    width: 95%;
+    height: 340px;
+    background-color: #26292c;
+    top: 55px;
+    position: absolute;
+    overflow: auto;
+}
+
+.dropdown {
+    display: none;
+}
+
+.sidenav .documentation .funcbox ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidenav .documentation .funcbox ul li {
+    margin: 5px;
+    background-color: #363636;
+    border-radius: 2px;
+    padding: 4px;
+    cursor: pointer;
+    color: #cdcdcd;
+}
+
+.sidenav .documentation .funcbox ul li .dropdown ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content .map {
+    width: 90%;
+    height: 550px;
+    background-color: #26292c;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 15px;
-    background: #bbb;
-    font-size: 28px;
-    color: black;
+    border: 1px solid white;
 }
 
-#wrapper corner {
-  margin: bottom;
-  display: block;
+.content .map .frontlogo {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 200px;
+    top: 0;
+    position: absolute;
 }
 
-#wrapper .containerBox {
-  position: relative;
-  border: medium solid lightblue;
+.content .map .started {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top: 70px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-#wrapper .bottomright {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  font-size: 18px;
-  border: medium solid lightblue;
+.content .map .started .date {
+    width: 250px;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
-#wrapper .topleft {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-size: 18px;
+.content .map .started .date p {
+    top: 20px;
+    position: relative;
+    text-align: left;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
-
-#wrapper img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
+/*Func box scroll bar*/
+.sidenav .documentation .funcbox::-webkit-scrollbar {
+    width: 5px; 
 }
 
-activeBox {
-  border: medium solid red;
+.sidenav .documentation .funcbox::-webkit-scrollbar-track {
+    background: none; 
 }
 
-#hostWrapper {
-    white-space: nowrap;
-    overflow-y:hidden
-}
-#hostWrapper div {
-    display: inline-block;
-    height: 1480px;
-    width: 1028px;
-    border-radius: 15px;
-    background: #bbb;
-    font-size: 28px;
-    color: black;
-    vertical-align: top;
-    text-wrap: wrap;
-    
+.sidenav .documentation .funcbox::-webkit-scrollbar-thumb {
+    background: #888; 
 }
